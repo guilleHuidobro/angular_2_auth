@@ -1,22 +1,14 @@
 import {Component} from 'angular2/core';
 import {Router} from 'angular2/router';
 import {ApiService} from './api.service';
+import {NavbarComponent} from './navbar.component';
 
 @Component({
     selector: 'create',
-    template: `
-        <h4>Create Account</h4>
-            <a href="login">Goto Login Page</a>
-        <form #f="ngForm" (ngSubmit)="onSubmit(email.value, password.value)">    
-            <label for="email">Email</label>
-            <input type="email" #email id="email" required>
-            
-            <label for="password">Password</label>
-            <input type="password" #password required>
-            
-            <button type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">Submit</button>
-        </form>
-    `
+    directives: [NavbarComponent],
+    templateUrl: "app/src/views/account.create.component.html",
+    styles: [`.mdl-layout {align-items: center;justify-content: center;}
+    .mdl-layout__content {padding: 24px;flex: none;}`]
 })
 export class AccountCreateComponent {
 

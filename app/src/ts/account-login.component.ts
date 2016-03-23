@@ -5,19 +5,19 @@ import {NavbarComponent} from './navbar.component';
 
 @Component({
     selector: 'login',
-    directives:[NavbarComponent],
+    directives: [NavbarComponent],
     templateUrl: "app/src/views/account.login.component.html",
     styles: [`.mdl-layout {align-items: center;justify-content: center;}
     .mdl-layout__content {padding: 24px;flex: none;}`]
 })
-export class AccountLoginComponent {
+export class AccountLoginComponent{
     public loginError = false; // True if there is a login error.
 
     constructor(private _router: Router,
-                private _apiService: ApiService) {}
+        private _apiService: ApiService) { }
 
 
-    onSubmit(email, password) {    
+    onSubmit(email, password) {
         console.log("logueando");
         this.loginError = false;
 
@@ -29,6 +29,7 @@ export class AccountLoginComponent {
                 this.loginError = true;
             }
         });
+        
     }
 
 }

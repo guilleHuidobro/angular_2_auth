@@ -1,0 +1,21 @@
+<navbar></navbar>
+<div class="mdl-grid">
+    <div class="mdl-cell mdl-cell--2-col"></div>
+    <div class="mdl-cell mdl-cell--8-col">
+
+        <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
+            <tr>
+                <th>Id</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+            </tr>
+            <tr *ngFor="#contact of contacts" (click)="onSelect(contact)">
+                <td>{{contact.id}}</td>
+                <td>{{contact.firstName}}</td>
+                <td>{{contact.lastName}}</td>
+            </tr>
+        </table>
+
+    </div>
+    <div class="mdl-cell mdl-cell--2-col"></div>
+</div>

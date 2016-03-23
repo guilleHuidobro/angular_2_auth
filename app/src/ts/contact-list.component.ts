@@ -2,37 +2,20 @@ import {Component, OnInit} from 'angular2/core';
 import {Router} from 'angular2/router';
 import {Contact} from './contact';
 import {ApiService} from './api.service';
+import {NavbarComponent} from './navbar.component';
 
 @Component({
     selector: 'contact-list',
     providers: [ApiService],
-    template: `  
-        <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
-            <tr>
-                <th>Id</th>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>Phone Number</th>
-                <th>Email</th>
-            </tr>
-            <tr *ngFor="#contact of contacts" (click)="onSelect(contact)">
-                <td>{{contact.id}}</td>
-                <td>{{contact.firstName}}</td>
-                <td>{{contact.lastName}}</td>
-                <td>(555)555-5555</td>
-                <td>example@example.com</td>
-            </tr>
-        </table>
-    `,
+    directives: [NavbarComponent],
+    templateUrl: "app/src/views/contact.list.component.html",
     styles: [`
         tr {
             cursor: pointer;
         }
-
         th {
             text-align:left;
         }
-
         td {
             text-align:left;
         }
