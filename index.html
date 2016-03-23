@@ -1,26 +1,34 @@
 <html>
-  <head>  
- <meta name="google-signin-scope" content="profile email">
+
+<head>
+    <meta name="google-signin-scope" content="profile email">
     <meta name="google-signin-client_id" content="39200453253-dnrasfebpert6um9c15psms0abjmm10u.apps.googleusercontent.com">
     <script src="https://apis.google.com/js/platform.js" async defer></script>
     <!-- 0. Set the base href URL to '/'. -->
     <!-- This tells the router how to compose navigation URLs. -->
     <base href="/">
 
+    <!--material design-->
+    <link rel="stylesheet" href="/node_modules/material-design-lite/material.min.css">
+    <script src="/node_modules/material-design-lite/material.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
     <!-- Page title. -->
-    <title>Angular 2 - Sample CRUD Application</title>     
-    <link href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en" rel="stylesheet">
+    <title>Angular 2 - Sample CRUD Application</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en"
+    rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="dist/angular2crud.css">
 
     <!-- 1. Load Angular 2 JS libs, material JS lib, and Firebase JS lib. -->
     <script src="dist/angular2crud.js"></script>
-    <script src="https://cdn.firebase.com/js/client/2.3.2/firebase.js"></script> <!-- Firebase via CDN for now.-->     
+    <script src="https://cdn.firebase.com/js/client/2.3.2/firebase.js"></script>
+    <!-- Firebase via CDN for now.-->
 
     <!-- 2. Configure SystemJS. -->
     <!-- Info: https://angular.io/docs/ts/latest/quickstart.html#!#systemjs -->
     <script>
-      System.config({
+        System.config({
         packages: {        
           app: {
             format: 'register',
@@ -32,10 +40,21 @@
             .then(null, console.error.bind(console));
     </script>
 
-  </head>
+</head>
 
-  <body>
+<body>
     <!-- 3. Display the application. -->
-    <crud-app>Loading...</crud-app>
-  </body>
+    <crud-app>
+        <div style="height:100px;"></div>
+        <div class="mdl-grid">
+            <div class="mdl-cell mdl-cell--4-col"></div>
+            <div class="mdl-cell mdl-cell--4-col">
+                <div id="p2" class="mdl-progress mdl-js-progress mdl-progress__indeterminate">
+                </div>
+            </div>
+            <div class="mdl-cell mdl-cell--4-col"></div>
+        </div>
+    </crud-app>
+</body>
+
 </html>

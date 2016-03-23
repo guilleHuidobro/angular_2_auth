@@ -1,9 +1,11 @@
 import {Component, OnInit} from 'angular2/core';
 import {Router} from 'angular2/router';
 import {ApiService} from './api.service';
+import {NavbarComponent} from './navbar.component';
 
 @Component({
     selector: 'home-test',
+    directives:[NavbarComponent],
     providers: [ApiService],
     template: `
 <style>
@@ -31,19 +33,7 @@ import {ApiService} from './api.service';
 
 </style>
 <div class="mdl-layout mdl-js-layout">
-  <header class="mdl-layout__header">
-    <div class="mdl-layout-icon"></div>
-    <div class="mdl-layout__header-row">
-      <span class="mdl-layout__title">Material Design Lite</span>
-      <div class="mdl-layout-spacer"></div>
-      <nav class="mdl-navigation">
-        <a class="mdl-navigation__link" href="#">Home</a>
-        <a *ngIf="islogged" class="mdl-navigation__link" href="dashboard/contacts">Dashboard</a>
-        <a *ngIf="!islogged" class="mdl-navigation__link" href="login">Login</a>
-        <a *ngIf="!islogged" class="mdl-navigation__link" href="create">Sign In</a>
-      </nav>
-    </div>
-  </header>
+<navbar></navbar>
   <main class="mdl-layout__content">
     <div class="mdl-grid">
       <div class="mdl-cell mdl-cell--4-col">

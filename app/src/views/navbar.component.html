@@ -1,0 +1,14 @@
+  <header class="mdl-layout__header">
+    <div class="mdl-layout-icon"></div>
+    <div class="mdl-layout__header-row">
+      <span class="mdl-layout__title">Material Design Lite</span>
+      <div class="mdl-layout-spacer"></div>
+      <nav class="mdl-navigation">
+        <a class="mdl-navigation__link" href="#">Home</a>
+        <a *ngIf="islogged" class="mdl-navigation__link" href="dashboard/contacts">Dashboard</a>
+        <a *ngIf="!islogged" class="mdl-navigation__link" href="login">Login</a>
+        <a *ngIf="!islogged" class="mdl-navigation__link" href="create">Sign In</a>
+        <a *ngIf="islogged" href="#" (click)="onLogout()">Logout</a>
+      </nav>
+    </div>
+  </header>
