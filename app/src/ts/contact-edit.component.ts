@@ -7,6 +7,9 @@ import {Contact} from './contact';
     selector: 'contact-edit',
     providers: [ApiService],
     template: `
+<div class="mdl-grid">
+    <div class="mdl-cell mdl-cell--3-col"></div>
+    <div class="mdl-cell mdl-cell--6-col">
         <div *ngIf="contact">
             <h4>{{contact.firstName}} {{contact.lastName}}</h4>
 
@@ -21,6 +24,9 @@ import {Contact} from './contact';
                 <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="button" (click)="onCancel()">Cancel</button>
             </form>
         </div>
+    </div>
+    <div class="mdl-cell mdl-cell--3-col"></div>
+</div>    
     `
 })
 export class ContactEditComponent implements OnInit {

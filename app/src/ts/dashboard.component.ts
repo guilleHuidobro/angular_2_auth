@@ -5,22 +5,26 @@ import {ContactDetailComponent} from './contact-detail.component';
 import {ContactNewComponent} from './contact-new.component';
 import {ContactEditComponent} from './contact-edit.component';
 import {ApiService} from './api.service';
+import {NavbarComponent} from './navbar.component';
 
 @Component({
     selector: 'home',
-    directives: [ROUTER_DIRECTIVES],
+    directives: [ROUTER_DIRECTIVES, NavbarComponent],
     providers: [ApiService],
     template: `
-        <a href="home">Home</a>
-        <a href="#"(click)="onLogout()">Logout</a>
+        <navbar></navbar>
         <br>
-
-        <nav>
+        <br>
+        <div class="mdl-grid">
+            <div class="mdl-cell mdl-cell--4-col"></div>
+            <div class="mdl-cell mdl-cell--8-col">
+            <nav>
             <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" [routerLink]="['Contacts']">Contact List</button> | <!-- Bind clickable HTML to a route. -->
             <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" [routerLink]="['ContactNew']">New Contact</button> |
             <span>{{email}}</span>
-        </nav>
-
+            </nav>
+            </div>
+        </div>
         <br>
 
         <router-outlet></router-outlet> <!-- Display views produced by the router. -->
@@ -43,7 +47,7 @@ export class DashboardComponent implements OnInit {
      * Note: Underscore convention in Angular 2 signifies a private variable.
      */
     constructor(private _router: Router,
-                private _apiService: ApiService) {}
+        private _apiService: ApiService) { }
     
     /**
      * Lifecycle Hook: ngOnInit - after the first ngOnChanges.

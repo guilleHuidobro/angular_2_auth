@@ -2,12 +2,10 @@ import {Component, OnInit} from 'angular2/core';
 import {Router} from 'angular2/router';
 import {Contact} from './contact';
 import {ApiService} from './api.service';
-import {NavbarComponent} from './navbar.component';
 
 @Component({
     selector: 'contact-list',
     providers: [ApiService],
-    directives: [NavbarComponent],
     templateUrl: "app/src/views/contact.list.component.html",
     styles: [`
         tr {

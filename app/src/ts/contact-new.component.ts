@@ -6,6 +6,9 @@ import {ApiService} from './api.service';
     selector: 'contact-new',
     providers: [ApiService],
     template: `
+<div class="mdl-grid">
+    <div class="mdl-cell mdl-cell--4-col"></div>
+    <div class="mdl-cell mdl-cell--8-col">
         <form #f="ngForm" (ngSubmit)="onSubmit(f.value)">
             <label for="firstName">First Name</label>
             <input class="" type="text" ngControl="firstName" required>
@@ -14,6 +17,8 @@ import {ApiService} from './api.service';
             <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="submit">Submit</button>
             <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="button" (click)="onCancel()">Cancel</button>
         </form>
+    </div>
+</div>
     `
 })
 export class ContactNewComponent {
