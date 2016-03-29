@@ -20,7 +20,8 @@ import {ApiService} from './api.service';
     `]
 })
 export class ContactListComponent implements OnInit {
-    public contacts: Contact[]; // List of contacts.
+    public contacts: Contact[]=[]; // List of contacts.
+    isContactsFilled:boolean = false;
 
     /**
      * ContactListComponent Constructor.
@@ -37,7 +38,15 @@ export class ContactListComponent implements OnInit {
      * More Info: https://angular.io/docs/ts/latest/guide/lifecycle-hooks.html
      */
     ngOnInit() {
-        this._apiService.getContacts().subscribe(contacts => this.contacts = contacts);
+        this._apiService.getContacts().subscribe(contacts => {this.contacts = contacts; this.isContactsFilled=true}
+        );
+        /*
+        console.log(this.contacts.length);
+        if(this.contacts.length > 0){
+            this.isContactsFilled = true;
+        }
+        console.log(this.isContactsFilled);
+        */
     }
 
     /**

@@ -20,8 +20,7 @@ import {NavbarComponent} from './navbar.component';
             <div class="mdl-cell mdl-cell--8-col">
             <nav>
             <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" [routerLink]="['Contacts']">Contact List</button> | <!-- Bind clickable HTML to a route. -->
-            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" [routerLink]="['ContactNew']">New Contact</button> |
-            <span>{{email}}</span>
+            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" [routerLink]="['ContactNew']">New Contact</button> 
             </nav>
             </div>
         </div>

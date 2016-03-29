@@ -203,7 +203,7 @@ export class ApiFirebaseService {
         var authData = this.firebase.getAuth(); // Get current auth.
 
         if (authData) {
-            return authData.password.email;
+            return authData.password;
         } else {
             console.log("User is logged out");
         }

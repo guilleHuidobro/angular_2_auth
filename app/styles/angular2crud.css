@@ -1,3 +1,39 @@
 .error {
     color: red;
 }
+/*home component*/
+.demo-card-wide.mdl-card {
+  width: 512px;
+}
+.demo-card-wide > .mdl-card__title {
+  color: #fff;
+  height: 176px;
+  background: url('../assets/demos/welcome_card.jpg') center / cover;
+}
+.demo-card-wide > .mdl-card__menu {
+  color: #fff;
+}
+
+.demo-card-square.mdl-card {
+  width: 320px;
+  height: 320px;
+}
+.demo-card-square > .mdl-card__title {
+  color: #fff;
+  background:
+    url('http://38.media.tumblr.com/avatar_6dd2804cc9d8_128.png') bottom right 15% no-repeat #46B6AC;
+}
+
+.demo-card-square > #card-dog {
+  color: #fff;
+  background:
+    url('https://38.media.tumblr.com/avatar_05f29b8ad11a_128.png') bottom right 15% no-repeat #46B6AC;
+}
+
+.demo-card-square > #card-baby {
+  color: #fff;
+  background:
+    url('https://33.media.tumblr.com/eedcca3f0102b3bb30ea3e7ed2f3f102/tumblr_inline_mkrsel4z6h1qz4rgp.png') bottom right 15% no-repeat #46B6AC;
+}
+
+/*end home component*/
