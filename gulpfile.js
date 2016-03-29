@@ -11,13 +11,11 @@ var jsLibFiles = [
     'node_modules/rxjs/bundles/Rx.js',
     'node_modules/angular2/bundles/angular2.dev.js',
     'node_modules/angular2/bundles/router.dev.js',
-    'node_modules/angular2/bundles/http.dev.js',
-    'node_modules/material-design-lite/material.min.js'
+    'node_modules/angular2/bundles/http.dev.js'
 ];
 
 // List of .css libs.
 var cssLibFiles = [
-    'node_modules/material-design-lite/material.min.css',
     'app/styles/angular2crud.css'
 ];
 
