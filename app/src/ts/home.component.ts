@@ -2,10 +2,11 @@ import {Component, OnInit} from 'angular2/core';
 import {Router} from 'angular2/router';
 import {ApiService} from './api.service';
 import {NavbarComponent} from './navbar.component';
+import {MapComponent} from './maps.component';
 
 @Component({
     selector: 'home-test',
-    directives:[NavbarComponent],
+    directives:[NavbarComponent,MapComponent],
     providers: [ApiService],
     templateUrl: "app/src/views/home.component.html"
 })
