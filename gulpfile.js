@@ -12,7 +12,7 @@ var jsLibFiles = [
     'node_modules/angular2/bundles/angular2.dev.js',
     'node_modules/angular2/bundles/router.dev.js',
     'node_modules/angular2/bundles/http.dev.js',
-    'node_modules/angular2_google_maps/bundles/angular2_google_maps.js'
+    'mapas/angular2_google_maps.js'
 ];
 
 // List of .css libs.
