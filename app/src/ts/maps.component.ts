@@ -42,19 +42,22 @@ import {
 `})
 export class MapComponent {
   // google maps zoom level
-  zoom: number = 8;
+  zoom: number = 14;
   
   // initial center position for the map
-  lat: number = 51.673858;
-  lng: number = 7.815982;
+  lat: number = -32.984582;
+  lng: number = -68.788601;
+  
   
   clickedMarker(label: string, index: number) {
-    window.alert(`clicked the marker: ${label || index}`)
+    //window.alert(`clicked the marker: ${label || index}`)
     this.markers.splice(index, 1);
   }
   
   
   mapClicked($event: MouseEvent) {
+    console.log($event.coords.lat,$event.coords.lng);
+    this.markers = [];
     this.markers.push({
       lat: $event.coords.lat,
       lng: $event.coords.lng
@@ -67,22 +70,8 @@ export class MapComponent {
   
   markers: marker[] = [
 	  {
-		  lat: 51.673858,
-		  lng: 7.815982,
-		  label: 'A',
-		  draggable: true
-	  },
-	  {
-		  lat: 51.373858,
-		  lng: 7.215982,
-		  label: 'B',
-		  draggable: false
-	  },
-	  {
-		  lat: 51.723858,
-		  lng: 7.895982,
-		  label: 'C',
-		  draggable: true
+		  lat: -32.984582,
+		  lng: -68.788601,
 	  }
   ]
 }
@@ -90,7 +79,5 @@ export class MapComponent {
 interface marker {
 	lat: number;
 	lng: number;
-	label?: string;
-	draggable: boolean;
 }
 
